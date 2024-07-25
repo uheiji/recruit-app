@@ -1,6 +1,6 @@
-# 求人サイト
+# 自己学習用に作成している求人サイトです
 
-これはlaravelで作成されたWebアプリケーションです。
+これはLaravelで作成されたWebアプリケーションです。
 求職者が仕事を見つけ、企業が求人情報を投稿するための機能を提供します。求職者、企業、管理者向けの機能が含まれています
 
 # 主なページと機能 
@@ -40,13 +40,13 @@
 お気に入り求人を一括で応募可能。
 
 # 使用している技術
-* larevel
-* tailwindcss
+* Laravel
+* TailwindCSS
 * HTML&CSS
 * MySQL
 
 #　データベース
-https://drive.google.com/file/d/1YA5uKFGQtT_mAhi5-GJC1e6w9fML63nK/view?usp=sharing
+<img src="./images/ER.png">
 
 # 環境構築
 
