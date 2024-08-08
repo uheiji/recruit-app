@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Recruit;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Company;
+use App\Models\Work;
 
 class IndexController extends Controller
 {
@@ -14,7 +15,9 @@ class IndexController extends Controller
     public function __invoke(Request $request)
     {
         $companies = Company::all();
+        $works = Work::all();
         return view('recruit.index')
-        ->with('companies' , $companies);
+        ->with('companies' , $companies)
+        ->with('works' , $works);
     }
 }
