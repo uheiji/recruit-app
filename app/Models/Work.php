@@ -11,4 +11,9 @@ class Work extends Model
     protected $fillable = [
         'company_id', 'title', 'description', 'requirements', 'salary', 'location', 'tag',
     ];
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
 }
