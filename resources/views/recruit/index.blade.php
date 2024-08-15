@@ -28,24 +28,25 @@
                         <p class="text-gray-700">勤務地: {{$work->location}}</p>
                         <p class="text-gray-700">タグ: {{$work->tag}}</p>
                     </div>
-                    <div class="flex space-x-4">
+                    <div class="flex space-x-4 mt-4">
                         <!-- 求人詳細を見るボタン -->
-                        <a href="" class="flex items-center justify-center">
-                            <div class="bg-green-500 text-black font-bold py-2 px-4 rounded-full hover:bg-green-600">求人詳細を見る</div>
-
+                        <a href="" class="flex items-center justify-center border bg-blue-500 text-black font-bold py-2 px-4 rounded-full hover:bg-blue-600">
+                            求人詳細を見る
                             <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
                             </svg>
                         </a>
 
                         <!-- 気になるボタン -->
-                        <button class="flex items-center justify-center border border-gray-300 text-blue-500 font-bold py-2 px-4 rounded-full hover:bg-gray-100">
+                        <button class="flex items-center justify-center border border-gray-300 text-blue-500 font-bold py-2 px-4 rounded-full hover:bg-gray-100 ml-4">
                             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 21l-1-1c-5-5-6-6-6-10a6 6 0 0112 0c0 4-1 5-6 10z"></path>
                             </svg>
                             気になる
                         </button>
                     </div>
+
+
 
                 </div>
             @endforeach
