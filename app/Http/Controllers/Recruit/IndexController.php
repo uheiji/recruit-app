@@ -15,7 +15,8 @@ class IndexController extends Controller
     public function __invoke(Request $request)
     {
         $companies = Company::all();
-        $works = Work::all();
+        $works = Work::paginate(6);
+        
         return view('recruit.index')
         ->with('companies' , $companies)
         ->with('works' , $works);

@@ -16,4 +16,6 @@ class Work extends Model
     {
         return $this->belongsTo(Company::class);
     }
+
+    
 }
