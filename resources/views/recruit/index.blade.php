@@ -11,7 +11,7 @@
 </head>
 <body class="bg-gray-100 text-gray-900">
     <div class="container mx-auto p-4">
-        <h1 class="text-3xl font-bold text-blue-500 mb-6">求人サイト</h1>
+        <h1 class="text-3xl font-bold text-blue-500 mb-6">自己学習のための求人サイト</h1>
 
         <hr class="my-6">
 
@@ -22,8 +22,8 @@
                         <h2 class="text-xl font-bold text-blue-800 mb-2">{{$work->company->name}}</h2>
                         <h3 class="text-lg font-semibold text-gray-800 mb-4">{{$work->title}}</h3>
                         <div class="mb-4">
-                            <p class="text-gray-700 mb-2"><span class="font-bold">説明:</span> {{$work->description}}</p>
-                            <p class="text-gray-700 mb-2"><span class="font-bold">要件:</span> {{$work->requirements}}</p>
+                            <p class="text-gray-700 mb-2"><span class="font-bold">説明:</span> {{ Str::limit($work->description, 200)}}</p>
+                            <p class="text-gray-700 mb-2"><span class="font-bold">要件:</span> {{ Str::limit($work->requirements, 200)}}</p>
                             <p class="text-gray-700 mb-2"><span class="font-bold">給与:</span> {{$work->salary}}円</p>
                             <p class="text-gray-700 mb-2"><span class="font-bold">勤務地:</span> {{$work->location}}</p>
                             <p class="text-gray-700 mb-2"><span class="font-bold">タグ:</span> {{$work->tag}}</p>
