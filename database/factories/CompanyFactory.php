@@ -20,7 +20,7 @@ class CompanyFactory extends Factory
         return [
             'name' => $this->faker->company,
             'email' => $this->faker->unique()->companyEmail,
-            'password' => bcrypt('password'), // パスワードをハッシュ化
+            'password' => bcrypt('password'), 
             'address' => $this->faker->address,
             'phone' => $this->faker->phoneNumber,
             'created_at' => now(),

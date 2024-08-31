@@ -20,8 +20,8 @@ class FavoriteFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::factory(), // Userファクトリーから生成
-            'work_id' => Work::factory(), // Workファクトリーから生成
+            'user_id' => User::factory(),
+            'work_id' => Work::factory(),
             'created_at' => now(),
             'updated_at' => now(),
         ];

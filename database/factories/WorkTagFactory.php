@@ -20,8 +20,8 @@ class WorkTagFactory extends Factory
     public function definition(): array
     {
         return [
-            'work_id' => Work::factory(), // Workファクトリーから生成
-            'tag_id' => Tag::factory(), // Tagファクトリーから生成
+            'work_id' => Work::factory(),
+            'tag_id' => Tag::factory(),
             'created_at' => now(),
             'updated_at' => now(),
         ];

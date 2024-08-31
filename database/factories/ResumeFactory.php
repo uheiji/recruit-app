@@ -19,7 +19,7 @@ class ResumeFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::factory(), // Userファクトリーから生成
+            'user_id' => User::factory(),
             'skills' => $this->faker->text,
             'work_experience' => $this->faker->text,
             'education' => $this->faker->text,

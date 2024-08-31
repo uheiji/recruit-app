@@ -21,9 +21,9 @@ class StaffFactory extends Factory
     public function definition(): array
     {
         return [
-            'company_id' => Company::factory(), // Companyファクトリーから生成
+            'company_id' => Company::factory(), 
             'name' => $this->faker->name,
-            'password' => bcrypt('password'), // パスワードをハッシュ化
+            'password' => bcrypt('password'),
             'email' => $this->faker->unique()->safeEmail,
             'created_at' => now(),
             'updated_at' => now(),

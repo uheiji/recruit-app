@@ -19,7 +19,7 @@ class WorkFactory extends Factory
     public function definition(): array
     {
         return [
-            'company_id' => Company::factory(), // Companyファクトリーから生成
+            'company_id' => Company::factory(), 
             'title' => $this->faker->jobTitle,
             'description' => $this->faker->paragraph,
             'requirements' => $this->faker->text,
