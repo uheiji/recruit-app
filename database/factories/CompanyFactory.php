@@ -1,14 +1,14 @@
 <?php
 
 namespace Database\Factories;
-use App\Models\User;
+use App\Models\Company;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Company>
  */
-class UserFactory extends Factory
+class CompanyFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,12 +18,11 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'email' => $this->faker->unique()->safeEmail,
+            'name' => $this->faker->company,
+            'email' => $this->faker->unique()->companyEmail,
             'password' => bcrypt('password'), 
-            'name' => $this->faker->name,
             'address' => $this->faker->address,
             'phone' => $this->faker->phoneNumber,
-            'role' => $this->faker->randomElement(['job_seeker', 'company']),
             'created_at' => now(),
             'updated_at' => now(),
         ];
