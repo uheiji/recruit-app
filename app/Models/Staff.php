@@ -10,4 +10,8 @@ class Staff extends Model
     use HasFactory;
 
     protected $table = 'staff';
+
+    protected $hidden = [
+        'password',
+    ];
 }

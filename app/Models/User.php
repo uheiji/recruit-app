@@ -10,4 +10,8 @@ class User extends Model
     use HasFactory;
 
     protected $table = 'users';
+
+    protected $hidden = [
+        'password',
+    ];
 }
