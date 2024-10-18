@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Company extends Model
+class Staff extends Model
 {
     use HasFactory;
 
+    protected $table = 'staff';
 
-    protected $table = 'companies';
+    protected $hidden = [
+        'password',
+    ];
 }
