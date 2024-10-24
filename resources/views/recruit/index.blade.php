@@ -19,7 +19,12 @@
             @foreach($works as $work)
                 <div class="bg-white shadow-md rounded-lg p-6 flex flex-col justify-between">
                     <div>
-                        <h2 class="text-xl font-bold text-blue-800 mb-2">{{$work->company->name}}</h2>
+                        @if($work->company)
+                            <h2 class="text-xl font-bold text-blue-800 mb-2">{{$work->company->name}}</h2>
+                        @else
+                            <h2 class="text-xl font-bold text-blue-800 mb-2">会社情報がありません</h2>
+                        @endif
+
                         <h3 class="text-lg font-semibold text-gray-800 mb-4">{{$work->title}}</h3>
                         <div class="mb-4">
                             <p class="text-gray-700 mb-2"><span class="font-bold">説明:</span> {{ Str::limit($work->description, 200)}}</p>
