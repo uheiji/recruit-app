@@ -19,10 +19,10 @@ class CompanyFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->company,
+            'name' => $this->faker->randomElement(['株式会社サンプル', '合同会社デモ', '有限会社テスト']),
             'email' => $this->faker->unique()->companyEmail,
-            'password' => bcrypt('password'), 
-            'address' => $this->faker->address,
+            'password' => bcrypt('password'),
+            'address' => $this->faker->randomElement(['東京都渋谷区', '大阪市北区', '福岡市中央区', '札幌市北区']),
             'phone' => $this->faker->phoneNumber,
             'created_at' => now(),
             'updated_at' => now(),

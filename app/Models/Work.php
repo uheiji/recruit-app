@@ -11,4 +11,8 @@ class Work extends Model
 
 
     protected $table = 'works';
+
+    public function company(){
+        return $this->belongsTo(Company::class);
+    }
 }

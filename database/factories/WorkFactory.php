@@ -20,12 +20,13 @@ class WorkFactory extends Factory
     public function definition(): array
     {
         return [
-            'company_id' => Company::factory(), 
-            'title' => $this->faker->jobTitle,
-            'description' => $this->faker->paragraph,
-            'requirements' => $this->faker->text,
-            'salary' => $this->faker->numberBetween(30000, 120000),
-            'location' => $this->faker->city,
+            'company_id' => \App\Models\Company::factory(),
+            'title' => $this->faker->randomElement(['フロントエンドエンジニア', 'バックエンドエンジニア', 'デザイナー']),
+            'description' => 'このポジションでは最新の技術を使った開発に携わることができます。',
+            'requirements' => '3年以上の開発経験と、チームでの協力ができることが求められます。',
+            'salary' => $this->faker->numberBetween(100000, 999999),
+            'location' => $this->faker->randomElement(['東京都', '大阪府', '福岡県', '北海道']),
+            'tag' => $this->faker->randomElement(['リモート可', 'フルタイム', 'パートタイム']),
             'created_at' => now(),
             'updated_at' => now(),
         ];
