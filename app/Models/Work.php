@@ -9,5 +9,10 @@ class Work extends Model
 {
     use HasFactory;
 
+
     protected $table = 'works';
+
+    public function company(){
+        return $this->belongsTo(Company::class);
+    }
 }
